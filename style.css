@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+--DarkSlateGrey: hsl(234, 29%, 20%);
+--CharcoalGrey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+}
+body{
+    font-family: "Roboto", sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background:var(--CharcoalGrey);
+   
+    
+}
+main{
+    
+    width:50rem;
+    background:white;
+    border-radius:1rem;
+    display:flex;
+    flex-direction: rows;
+    padding:1rem;
+    height:30rem;
+       
+}
+.left{
+    width:30rem;
+    padding:3rem;
+    display:grid;
+    gap:.5rem;
+}
+
+.left img{
+    width:1rem;
+}
+.success{
+    display:flex;
+    justify-content: space-between;
+    margin-top:1rem;
+    
+
+
+}
+.valid{
+    display:grid;
+    gap:1.3rem;
+    
+}
+.content{
+    display:grid;
+    margin-left:.5rem;
+    gap:1.3rem;
+    
+}
+.email
+{
+    margin-top:2rem;
+    display:grid;
+    gap:1rem;
+}
+.email h3{
+    font-size:.6em;
+}
+.email input{
+    padding:.7rem;
+    outline:none;
+    border:.02rem solid  var(--Grey);
+    border-radius:.6rem;
+    width:100%;
+
+}
+#v1.active{
+    border:.02rem solid  var(--Tomato);
+    background-color: var(--Tomato);
+    opacity: .5rem;
+}
+#v1.active::placeholder{
+    color:var(--Tomato);
+}
+.email .subscribe{
+    padding:.7rem;
+    border-radius:.6rem;
+    outline:none;
+    background:var(--CharcoalGrey);
+    color:white;
+    border:none;
+    cursor:pointer;
+    width:100%;
+    margin-top:1rem;
+}
+.email .subscribe:hover{
+    background-color: var(--Tomato);
+}
+.right{
+    background-image: url("assets/images/illustration-sign-up-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:20rem;
+    order:1;
+}
+.right img{
+    width:20rem;
+    height:100%;
+   
+}
+.verified{
+    display:flex;
+    justify-content:space-between;
+}
+.error{
+    color:red;
+    font-size:.6em;
+
+}
+.desk-success{
+    width:20rem;
+    background-color: white;
+    height:20rem;
+    display:grid;
+    gap:1rem;
+    padding:1rem 2rem;
+    border-radius:1rem;
+}
+.desk-success img{
+    width:3rem;
+}
+.desk-success h1{
+    color:var(--DarkSlateGrey);
+    
+}
+
+.desk-success p{
+    color:var(--DarkSlateGrey);
+    font-size:.8em;
+}
+.desk-success span{
+    font-weight:bold;
+}
+.desk-success button{
+    padding:.5rem;
+    border-radius:.5rem;
+    color:var(--White);
+    background-color: var(--DarkSlateGrey);
+    outline:0;
+    cursor:pointer;
+    
+}
+.desk-success.hide{
+    display:none;
+}
+.email .subscribe:active,
+.dismiss:active{
+   transform:scale(.99);
+}
+@media (max-width:700px)
+{
+    
+    main{
+        width:35rem;
+        flex-direction: column;
+        height:50rem;
+        padding:0;
+        margin:0;
+        max-width:400px;
+        position:absolute;
+        margin:auto;
+        
+
+        
+    }
+    .right{
+        background-image: url("assets/images/illustration-sign-up-mobile.svg");
+        height:30rem;
+        order:-1;
+        padding:0;
+        width:100%;
+        background-size: contain;
+        
+    }
+    .left p{
+        margin-right:3rem;
+    }
+    .content{
+        margin-right:3rem;
+        position: absolute;
+        gap:0;
+        margin-left:2rem;
+        width:20rem;
+        
+        
+        
+    }
+    .valid{
+       gap:1.5rem;
+    }
+    .email{
+        width:20rem
+        
+
+    }
+    .right img{
+        border-bottom-left-radius:1rem;
+        border-bottom-left-radius:1rem;
+    }
+    
+    .desk-success{
+        width:100%;
+        height:43.5rem;
+        border-radius:0;
+        
+        
+    }
+    .desk-success img{
+          margin-top:7rem;
+    }
+    .desk-success h1{
+        margin-top:-7rem;
+    }
+    .desk-success p{
+        margin-top:-9rem;
+    }
+    .desk-success button{
+        margin-top:-10rem;
+        height:3rem;
+    }
+}
+
+
+
